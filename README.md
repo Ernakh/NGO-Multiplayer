@@ -19,7 +19,7 @@ Jogo multiplayer básico com o Netcode for GameObjects (NGO) da Unity
 - crie o script "NetworkManagerUI" e vincule ao "NetworkManagerUI"
 - no script, coloque esse código:
 
- [SerializeField]
+    [SerializeField]
     private Button serverBtn;
     [SerializeField]
     private Button clientBtn;
@@ -62,7 +62,7 @@ private void Awake()
 	if(!IsOwner)
 	{
 		return;
-	}
+	}****
 - No prefab do Player, vamos adicionar o componente NetworkTransform
 - Desmarcar a informação desnecessária, aquela que não vmaos transmitir para todos os jogadores, aquilo que não alteramos por exemplo (escala)
 - Execute para entender o problema (o client não se move, pq o server manda eme voltar pra posição)
