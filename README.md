@@ -179,7 +179,8 @@ Requer uma gestão mais manual para sincronização de variáveis.
 		private Transform spawnedObjectTransform;
 		
 - No Update, adicione:
-		if (Input.GetKeyDown(KeyCode.I))
+
+	if (Input.GetKeyDown(KeyCode.I))
         {
             spawnedObjectTransform = Instantiate(spawnedObjectPrefab);
             spawnedObjectTransform.GetComponent<NetworkObject>().Spawn(true);
@@ -189,6 +190,7 @@ Requer uma gestão mais manual para sincronização de variáveis.
         {
             Destroy(spawnedObjectTransform.gameObject);
         }
+  
 - Adicione ao player, o componente NetworkAnimator
 - Arraste o componente Animator do Player para o atributo Animator do NetworkAnimator
 - Crie um script chamado OwnerNetworkAnimator
